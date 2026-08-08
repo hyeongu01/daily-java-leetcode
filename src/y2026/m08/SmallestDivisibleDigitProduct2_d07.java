@@ -4,6 +4,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * https://leetcode.com/problems/smallest-divisible-digit-product-ii/description/?envType=daily-question&envId=2026-08-07
+ */
 class Input {
     String num;
     int t;
@@ -15,7 +18,7 @@ class Input {
 }
 
 public class SmallestDivisibleDigitProduct2_d07 {
-    static int result = Integer.MAX_VALUE;
+    static String result = null;
 
     public static void main(String[] args) {
         HashMap<Input, String> testCases = new HashMap<>();
@@ -27,11 +30,18 @@ public class SmallestDivisibleDigitProduct2_d07 {
         for (Map.Entry<Input, String> entry: testCases.entrySet()) {
             String res = solution(entry.getKey().num, entry.getKey().t);
             if (res.equals(entry.getValue())) {
-                System.out.println(" | 성공 | ");
+                System.out.println(" | 성공 | " + entry.getKey() + entry.getValue());
             } else {
-                System.out.println(" | 실패 | ");
+                System.out.println(" | 실패 | " + entry.getKey() + res);
             }
+            result = null;
         }
+//        String a = "123";
+//        String b = "124";
+//        List<String> temp = new ArrayList<>(List.of(a, b));
+//        temp.sort(Comparator.naturalOrder());
+//        System.out.println(temp);
+//        System.out.println(temp.getFirst());
 
         System.out.println(getDigitNumbers(256));
         System.out.println(getDigitNumbers(50));
@@ -59,9 +69,7 @@ public class SmallestDivisibleDigitProduct2_d07 {
                         .toList();
         StringBuffer sb = new StringBuffer();
         getCandidates(components, sb, min, t);
-
-        System.out.println(result);
-        return Integer.toString(result);
+        return result;
     }
 
     /* 본인 제외한 약수 반환 */
@@ -114,9 +122,14 @@ public class SmallestDivisibleDigitProduct2_d07 {
     }
 
     static void getCandidates(List<Integer> candidate, StringBuffer stringBuffer, int minValue, int t) {
-        System.out.println(stringBuffer.toString());
-        if (!stringBuffer.isEmpty() && Integer.parseInt(stringBuffer.toString()) > minValue && Integer.parseInt(stringBuffer.toString()) % t == 0) {
-            result = Math.min(Integer.parseInt(stringBuffer.toString()), result);
+        if (!stringBuffer.isEmpty() && stringBuffer.toString().compareTo(Integer.toString(minValue)) >= 0 && validator2(stringBuffer.toString(), t)) {
+            if (result == null) {
+                result = stringBuffer.toString();
+                return;
+            }
+            List<String> temp = new ArrayList<>(List.of(new String[]{result, stringBuffer.toString()}));
+            temp.sort(Comparator.naturalOrder());
+            result = temp.getFirst();
             return;
         }
         for (int c: candidate) {
@@ -124,5 +137,13 @@ public class SmallestDivisibleDigitProduct2_d07 {
             getCandidates(candidate, stringBuffer, minValue, t);
             stringBuffer.deleteCharAt(stringBuffer.length() - 1);
         }
+    }
+
+    static boolean validator2(String num, int t) {
+        int prod = 1;
+        for (String c: num.split("")) {
+            prod *= Integer.parseInt(c);
+        }
+        return prod % t == 0;
     }
 }
