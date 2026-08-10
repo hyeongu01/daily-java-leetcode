@@ -1,5 +1,8 @@
 package y2026.m08;
 
+import utils.TestCase;
+import utils.TestRunner;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -7,35 +10,20 @@ import java.util.stream.Stream;
 /**
  * https://leetcode.com/problems/smallest-divisible-digit-product-ii/description/?envType=daily-question&envId=2026-08-07
  */
-class Input {
-    String num;
-    int t;
-
-    Input(String num, int t) {
-        this.num = num;
-        this.t = t;
-    }
-}
-
 public class SmallestDivisibleDigitProduct2_d07 {
     static String result = null;
 
     public static void main(String[] args) {
-        HashMap<Input, String> testCases = new HashMap<>();
-
-        testCases.put(new Input("1234", 256), "1488");
-        testCases.put(new Input("12355", 50), "12355");
-        testCases.put(new Input("11111", 26), "-1");
-
-        for (Map.Entry<Input, String> entry: testCases.entrySet()) {
-            String res = solution(entry.getKey().num, entry.getKey().t);
-            if (res.equals(entry.getValue())) {
-                System.out.println(" | 성공 | " + entry.getKey() + entry.getValue());
-            } else {
-                System.out.println(" | 실패 | " + entry.getKey() + res);
-            }
-            result = null;
-        }
+        // 인자 타입이 서로 달라서 Object[] 로 묶어서 전달한다.
+        TestRunner.run("Smallest Divisible Digit Product II",
+                input -> {
+                    result = null; // 케이스마다 전역 결과 초기화
+                    return solution((String) input[0], (int) input[1]);
+                },
+                new TestCase<>(new Object[]{"1234", 256}, "1488"),
+                new TestCase<>(new Object[]{"12355", 50}, "12355"),
+                new TestCase<>(new Object[]{"11111", 26}, "-1")
+        );
 //        String a = "123";
 //        String b = "124";
 //        List<String> temp = new ArrayList<>(List.of(a, b));

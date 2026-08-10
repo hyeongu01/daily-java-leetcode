@@ -1,26 +1,23 @@
 package y2026.m08;
 
-import java.util.Arrays;
+import utils.TestCase;
+import utils.TestRunner;
+
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class LongestSubstringWithoutRepeatingCharacters_d07 {
-    static HashMap<String, Integer> testCases = new HashMap<>();
 
     public static void main(String[] args) {
-        testCases.put("abccbad", 4);
-        testCases.put("abcabcbb", 3);
-        testCases.put("bbbbb", 1);
-        testCases.put("pwwkew", 3);
-
-        for (Map.Entry<String, Integer> entry: testCases.entrySet()) {
-            int result = lengthOfLongestSubstring(entry.getKey());
-            System.out.print(result == entry.getValue() ? " | 정답 | " : " | 오답 | ");
-            System.out.println("input = " + entry.getKey() + " result = " + result + " correct = " + entry.getValue());
-        }
+        TestRunner.run("Longest Substring Without Repeating Characters",
+                LongestSubstringWithoutRepeatingCharacters_d07::lengthOfLongestSubstring,
+                new TestCase<>("abccbad", 4),
+                new TestCase<>("abcabcbb", 3),
+                new TestCase<>("bbbbb", 1),
+                new TestCase<>("pwwkew", 3)
+        );
     }
 
     /**
