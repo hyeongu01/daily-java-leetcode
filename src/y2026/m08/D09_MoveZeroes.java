@@ -8,10 +8,10 @@ import java.util.Arrays;
 /**
  * link: https://leetcode.com/problems/move-zeroes/
  */
-public class MoveZeroes_d09 {
+public class D09_MoveZeroes {
 
     public static void main(String[] args) {
-        TestRunner.run("Move Zeroes", MoveZeroes_d09::solve,
+        TestRunner.run("Move Zeroes", D09_MoveZeroes::solve,
                 new TestCase<>(new int[]{0, 1, 0, 3, 12}, new int[]{1, 3, 12, 0, 0}),
                 new TestCase<>(new int[]{0}, new int[]{0}),
                 new TestCase<>(new int[]{1, 0, 1}, new int[]{1, 1, 0})

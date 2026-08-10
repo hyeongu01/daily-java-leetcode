@@ -6,10 +6,10 @@ import utils.TestRunner;
 /**
  * link: https://leetcode.com/problems/greatest-common-divisor-of-strings/
  */
-public class GreatestCommonDivisorOfStrings_d10 {
+public class D10_GreatestCommonDivisorOfStrings {
 
     public static void main(String[] args) {
-        GreatestCommonDivisorOfStrings_d10 solution = new GreatestCommonDivisorOfStrings_d10();
+        D10_GreatestCommonDivisorOfStrings solution = new D10_GreatestCommonDivisorOfStrings();
 
         // 인자가 여러 개면 배열로 묶어서 전달한다.
         TestRunner.run("Greatest Common Divisor of Strings",

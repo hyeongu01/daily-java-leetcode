@@ -8,11 +8,11 @@ import java.util.HashMap;
 /**
  * link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
-public class LongestSubstringWithoutRepeatingCharacters_d07 {
+public class D07_LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
         TestRunner.run("Longest Substring Without Repeating Characters",
-                LongestSubstringWithoutRepeatingCharacters_d07::lengthOfLongestSubstring,
+                D07_LongestSubstringWithoutRepeatingCharacters::lengthOfLongestSubstring,
                 new TestCase<>("abccbad", 4),
                 new TestCase<>("abcabcbb", 3),
                 new TestCase<>("bbbbb", 1),

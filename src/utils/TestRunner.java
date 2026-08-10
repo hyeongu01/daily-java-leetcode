@@ -10,7 +10,7 @@ import java.util.function.Function;
  * 테스트 케이스 실행부터 결과 출력까지 자동화하는 유틸.
  *
  * <pre>
- * TestRunner.run("Move Zeroes", MoveZeroes_d09::solve,
+ * TestRunner.run("Move Zeroes", D09_MoveZeroes::solve,
  *         new TestCase&lt;&gt;(new int[]{0, 1, 0, 3, 12}, new int[]{1, 3, 12, 0, 0}),
  *         new TestCase&lt;&gt;(new int[]{0}, new int[]{0}));
  * </pre>

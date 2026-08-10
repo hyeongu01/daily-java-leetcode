@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 /**
  * https://leetcode.com/problems/smallest-divisible-digit-product-ii/description/?envType=daily-question&envId=2026-08-07
  */
-public class SmallestDivisibleDigitProduct2_d07 {
+public class D07_SmallestDivisibleDigitProduct2 {
     static String result = null;
 
     public static void main(String[] args) {
