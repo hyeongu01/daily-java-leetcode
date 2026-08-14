@@ -54,7 +54,7 @@ public class MinHeap<T extends Comparable<T>> implements IHeap<T> {
         return size == 0;
     }
 
-    private void heapifyUp(int idx) {
+    protected void heapifyUp(int idx) {
         if (idx == 0) {
             return;
         }
@@ -68,49 +68,40 @@ public class MinHeap<T extends Comparable<T>> implements IHeap<T> {
         }
     }
 
-    private void heapifyDown(int idx) {
+    protected void heapifyDown(int idx) {
         if (leftIdx(idx) >= size) {
             return;
         }
 
+        int smallerChildIdx;
         T current = data.get(idx);
-        T left = data.get(leftIdx(idx));
+        T smallerChild;
 
         if (rightIdx(idx) < size) {
+            T left = data.get(leftIdx(idx));
             T right = data.get(rightIdx(idx));
-
-            if (right.compareTo(left) < 0) { // right < left
-                if (current.compareTo(right) > 0) { // current > right
-                    data.set(idx, right);
-                    data.set(rightIdx(idx), current);
-                    heapifyDown(rightIdx(idx));
-                }
-            } else {
-                if (current.compareTo(left) > 0) { // current > left
-                    data.set(idx, left);
-                    data.set(leftIdx(idx), current);
-                    heapifyDown(leftIdx(idx));
-                }
-            }
-
+            smallerChildIdx = left.compareTo(right) < 0 ? leftIdx(idx) : rightIdx(idx);
         } else {
-            if (current.compareTo(left) > 0) { // current > left
-                data.set(idx, left);
-                data.set(leftIdx(idx), current);
-                heapifyDown(leftIdx(idx));
-            }
+            smallerChildIdx = leftIdx(idx);
+        }
+        smallerChild = data.get(smallerChildIdx);
+
+        if (current.compareTo(smallerChild) > 0) { // current > smallerChild
+            data.set(idx, smallerChild);
+            data.set(smallerChildIdx, current);
+            heapifyDown(smallerChildIdx);
         }
     }
 
-    private int parentIdx(int idx) {
+    protected int parentIdx(int idx) {
         return (idx - 1) / 2;
     }
 
-    private int leftIdx(int idx) {
+    protected int leftIdx(int idx) {
         return (idx * 2) + 1;
     }
 
-    private  int rightIdx(int idx) {
+    protected  int rightIdx(int idx) {
         return (idx * 2) + 2;
     }
 }

@@ -1,54 +1,17 @@
 package algorithems.heap;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class MaxHeap<T extends Comparable<T>> implements IHeap<T> {
-    List<T> data;
-    int size;
-    int maxSize;
+public class MaxHeap<T extends Comparable<T>> extends MinHeap<T> implements IHeap<T> {
 
     public MaxHeap(int maxSize) {
-        this.data = new ArrayList<T>(maxSize);
-        this.size = 0;
-        this.maxSize = maxSize;
+        super(maxSize);
     }
 
     public MaxHeap() {
         this(512);
     }
 
-
-    public T peek() {
-        if (isEmpty()) {
-            return null;
-        }
-        return data.getFirst();
-    }
-
-    public int size() {
-        return size;
-    }
-
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    private boolean isFull() {
-        return size >= maxSize;
-    }
-
-    public boolean add(T val) {
-        if (isFull()) {
-            return false;
-        }
-        data.add(val);
-        heapifyUp(size);
-        size ++;
-        return true;
-    }
-
-    private void heapifyUp(int idx) {
+    @Override
+    protected void heapifyUp(int idx) {
         if (idx == 0) {
             return;
         }
@@ -62,66 +25,29 @@ public class MaxHeap<T extends Comparable<T>> implements IHeap<T> {
         }
     }
 
-    public T pop() {
-        if (isEmpty()) {
-            return null;
-        }
-        T result = data.getFirst();
-        T last = data.removeLast();
-        size --;
-
-        if (!isEmpty()) {
-            data.set(0, last);
-            heapifyDown(0);
-        }
-        return result;
-    }
-
-    private void heapifyDown(int idx) {
-        if (isLeaf(idx)) {
+    @Override
+    protected void heapifyDown(int idx) {
+        if (leftIdx(idx) >= size) {
             return;
         }
 
-        T left = data.get(leftIdx(idx));
+        int biggerChildIdx;
         T current = data.get(idx);
+        T biggerChild;
+
         if (rightIdx(idx) < size) {
+            T left = data.get(leftIdx(idx));
             T right = data.get(rightIdx(idx));
-
-            if (left.compareTo(right) < 0) { // left < right
-                if (current.compareTo(right) < 0) { // current < right
-                    data.set(rightIdx(idx), current);
-                    data.set(idx, right);
-                    heapifyDown(rightIdx(idx));
-                }
-            } else { // left >= right
-                if (current.compareTo(left) < 0) { // current < left
-                    data.set(leftIdx(idx), current);
-                    data.set(idx, left);
-                    heapifyDown(leftIdx(idx));
-                }
-            }
+            biggerChildIdx = left.compareTo(right) < 0 ? rightIdx(idx) : leftIdx(idx); // left < right
         } else {
-            if (current.compareTo(left) < 0) { // current < left
-                data.set(leftIdx(idx), current);
-                data.set(idx, left);
-                heapifyDown(leftIdx(idx));
-            }
+            biggerChildIdx = leftIdx(idx);
         }
-    }
+        biggerChild = data.get(biggerChildIdx);
 
-    private int parentIdx(int idx) {
-        return (idx - 1) / 2;
-    }
-
-    private int leftIdx(int idx) {
-        return (idx * 2) + 1;
-    }
-
-    private int rightIdx(int idx) {
-        return (idx * 2) + 2;
-    }
-
-    private boolean isLeaf(int idx) {
-        return leftIdx(idx) >= size;
+        if (current.compareTo(biggerChild) < 0) { // current < biggerChild
+            data.set(idx, biggerChild);
+            data.set(biggerChildIdx, current);
+            heapifyDown(biggerChildIdx);
+        }
     }
 }
