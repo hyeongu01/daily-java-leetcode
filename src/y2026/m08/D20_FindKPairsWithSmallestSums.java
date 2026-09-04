@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class D20_FindKPairsWithSmallestSums {
+class D20_FindKPairsWithSmallestSums {
 
     public static void main(String[] args) {
         D20_FindKPairsWithSmallestSums solution = new D20_FindKPairsWithSmallestSums();

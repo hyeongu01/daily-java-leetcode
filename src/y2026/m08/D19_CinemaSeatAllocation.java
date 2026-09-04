@@ -6,7 +6,7 @@ import utils.TestRunner;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class D19_CinemaSeatAllocation {
+class D19_CinemaSeatAllocation {
 
     public static void main(String[] args) {
         D19_CinemaSeatAllocation solution = new D19_CinemaSeatAllocation();

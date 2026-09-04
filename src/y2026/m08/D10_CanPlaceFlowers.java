@@ -6,7 +6,7 @@ import utils.TestRunner;
 /**
  * https://leetcode.com/problems/can-place-flowers/
  */
-public class D10_CanPlaceFlowers {
+class D10_CanPlaceFlowers {
 
     public static void main(String[] args) {
         D10_CanPlaceFlowers solution = new D10_CanPlaceFlowers();

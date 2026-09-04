@@ -11,7 +11,7 @@ import java.util.Deque;
  * <p>
  * 자료구조: Stack, 알고리즘: 단조 스택 (monotonic stack)
  */
-public class D13_DailyTemperatures {
+class D13_DailyTemperatures {
 
     public static void main(String[] args) {
         D13_DailyTemperatures solution = new D13_DailyTemperatures();

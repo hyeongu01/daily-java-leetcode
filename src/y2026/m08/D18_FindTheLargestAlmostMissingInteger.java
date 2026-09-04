@@ -3,7 +3,7 @@ package y2026.m08;
 import utils.TestCase;
 import utils.TestRunner;
 
-public class D18_FindTheLargestAlmostMissingInteger {
+class D18_FindTheLargestAlmostMissingInteger {
 
     public static void main(String[] args) {
         D18_FindTheLargestAlmostMissingInteger solution = new D18_FindTheLargestAlmostMissingInteger();

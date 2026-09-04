@@ -3,7 +3,7 @@ package y2026.m08;
 import utils.TestCase;
 import utils.TestRunner;
 
-public class D21_StringCompression {
+class D21_StringCompression {
 
     public static void main(String[] args) {
         D21_StringCompression solution = new D21_StringCompression();

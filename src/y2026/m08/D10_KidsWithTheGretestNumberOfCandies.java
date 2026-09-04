@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * https://leetcode.com/problems/greatest-common-divisor-of-strings/
  */
-public class D10_KidsWithTheGretestNumberOfCandies {
+class D10_KidsWithTheGretestNumberOfCandies {
 
     public static void main(String[] args) {
         D10_KidsWithTheGretestNumberOfCandies solution = new D10_KidsWithTheGretestNumberOfCandies();

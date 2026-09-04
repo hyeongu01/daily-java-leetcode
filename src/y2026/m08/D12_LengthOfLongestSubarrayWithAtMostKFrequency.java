@@ -9,7 +9,7 @@ import java.util.HashMap;
  * https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/
  * HashMap 자료구조, two pointer 알고리즘
  */
-public class D12_LengthOfLongestSubarrayWithAtMostKFrequency {
+class D12_LengthOfLongestSubarrayWithAtMostKFrequency {
 
     public static void main(String[] args) {
         D12_LengthOfLongestSubarrayWithAtMostKFrequency solution = new D12_LengthOfLongestSubarrayWithAtMostKFrequency();

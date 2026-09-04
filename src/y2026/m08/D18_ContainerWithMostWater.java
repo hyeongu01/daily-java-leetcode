@@ -3,7 +3,7 @@ package y2026.m08;
 import utils.TestCase;
 import utils.TestRunner;
 
-public class D18_ContainerWithMostWater {
+class D18_ContainerWithMostWater {
 
     public static void main(String[] args) {
         D18_ContainerWithMostWater solution = new D18_ContainerWithMostWater();

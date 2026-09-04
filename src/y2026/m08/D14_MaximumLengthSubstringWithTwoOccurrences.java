@@ -3,7 +3,7 @@ package y2026.m08;
 import utils.TestCase;
 import utils.TestRunner;
 
-public class D14_MaximumLengthSubstringWithTwoOccurrences {
+class D14_MaximumLengthSubstringWithTwoOccurrences {
 
     public static void main(String[] args) {
         D14_MaximumLengthSubstringWithTwoOccurrences solution = new D14_MaximumLengthSubstringWithTwoOccurrences();

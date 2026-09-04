@@ -15,7 +15,7 @@ import java.util.*;
  * - 기존 Stack class 를 사용하여 스택을 사용함.
  * - java.util.Stack 은 캡슐화가 깨져있고, 순회 방식이 Stack 과 달라 주의가 필요하다. ArrayDeque class 를 사용하는 것이 권장됨.
  */
-public class D13_ExclusiveTimeOfFunctions {
+class D13_ExclusiveTimeOfFunctions {
 
     public static void main(String[] args) {
         D13_ExclusiveTimeOfFunctions solution = new D13_ExclusiveTimeOfFunctions();

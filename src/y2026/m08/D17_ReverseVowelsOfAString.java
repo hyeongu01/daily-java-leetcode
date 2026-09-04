@@ -6,7 +6,7 @@ import utils.TestRunner;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class D17_ReverseVowelsOfAString {
+class D17_ReverseVowelsOfAString {
 
     public static void main(String[] args) {
         D17_ReverseVowelsOfAString solution = new D17_ReverseVowelsOfAString();

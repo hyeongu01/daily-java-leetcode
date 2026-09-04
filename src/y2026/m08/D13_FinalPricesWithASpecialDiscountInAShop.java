@@ -16,7 +16,7 @@ import java.util.*;
  * 개선 결과
  * - 입력 풀 (n) 이 너무 작아서 그런지 속도, 메모리는 개선한 것이 더 안좋게 나타났다..
  */
-public class D13_FinalPricesWithASpecialDiscountInAShop {
+class D13_FinalPricesWithASpecialDiscountInAShop {
 
     public static void main(String[] args) {
         D13_FinalPricesWithASpecialDiscountInAShop solution = new D13_FinalPricesWithASpecialDiscountInAShop();

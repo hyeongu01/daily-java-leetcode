@@ -5,7 +5,7 @@ import utils.TestRunner;
 
 import java.util.HashSet;
 
-public class D11_SmallestMissingIntegerGreaterThenSequentialPrefixSum {
+class D11_SmallestMissingIntegerGreaterThenSequentialPrefixSum {
 
     public static void main(String[] args) {
         D11_SmallestMissingIntegerGreaterThenSequentialPrefixSum solution = new D11_SmallestMissingIntegerGreaterThenSequentialPrefixSum();

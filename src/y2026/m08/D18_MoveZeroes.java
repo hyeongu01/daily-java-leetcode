@@ -5,7 +5,7 @@ import utils.TestRunner;
 
 import java.util.Arrays;
 
-public class D18_MoveZeroes {
+class D18_MoveZeroes {
 
     public static void main(String[] args) {
         D18_MoveZeroes solution = new D18_MoveZeroes();

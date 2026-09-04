@@ -5,7 +5,7 @@ import utils.TestRunner;
 
 import java.util.Arrays;
 
-public class D19_MaxNumberOfKSumPairs {
+class D19_MaxNumberOfKSumPairs {
 
     public static void main(String[] args) {
         D19_MaxNumberOfKSumPairs solution = new D19_MaxNumberOfKSumPairs();

@@ -16,7 +16,7 @@ import java.util.Deque;
  * 자료구조: Stack
  * 알고리즘: Monotonic Stack (left, right 구하는 작업에서 활용)
  */
-public class D14_LargestRectangleInHistogram {
+class D14_LargestRectangleInHistogram {
 
     public static void main(String[] args) {
         D14_LargestRectangleInHistogram solution = new D14_LargestRectangleInHistogram();

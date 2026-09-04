@@ -3,7 +3,7 @@ package y2026.m08;
 import utils.TestCase;
 import utils.TestRunner;
 
-public class D20_ProductOfArrayExceptSelf {
+class D20_ProductOfArrayExceptSelf {
 
     public static void main(String[] args) {
         D20_ProductOfArrayExceptSelf solution = new D20_ProductOfArrayExceptSelf();

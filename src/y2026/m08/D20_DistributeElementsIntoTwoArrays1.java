@@ -6,7 +6,7 @@ import utils.TestRunner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class D20_DistributeElementsIntoTwoArrays1 {
+class D20_DistributeElementsIntoTwoArrays1 {
 
     public static void main(String[] args) {
         D20_DistributeElementsIntoTwoArrays1 solution = new D20_DistributeElementsIntoTwoArrays1();

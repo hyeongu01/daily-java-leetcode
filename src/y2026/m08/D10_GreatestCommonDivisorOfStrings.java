@@ -6,7 +6,7 @@ import utils.TestRunner;
 /**
  * link: https://leetcode.com/problems/greatest-common-divisor-of-strings/
  */
-public class D10_GreatestCommonDivisorOfStrings {
+class D10_GreatestCommonDivisorOfStrings {
 
     public static void main(String[] args) {
         D10_GreatestCommonDivisorOfStrings solution = new D10_GreatestCommonDivisorOfStrings();

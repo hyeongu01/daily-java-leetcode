@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * link: https://leetcode.com/problems/move-zeroes/
  */
-public class D09_MoveZeroes {
+class D09_MoveZeroes {
 
     public static void main(String[] args) {
         TestRunner.run("Move Zeroes", D09_MoveZeroes::solve,

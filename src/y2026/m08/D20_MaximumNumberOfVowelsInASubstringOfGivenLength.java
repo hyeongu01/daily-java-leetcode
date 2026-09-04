@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class D20_MaximumNumberOfVowelsInASubstringOfGivenLength {
+class D20_MaximumNumberOfVowelsInASubstringOfGivenLength {
 
     public static void main(String[] args) {
         D20_MaximumNumberOfVowelsInASubstringOfGivenLength solution = new D20_MaximumNumberOfVowelsInASubstringOfGivenLength();
