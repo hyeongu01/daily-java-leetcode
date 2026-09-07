@@ -31,11 +31,11 @@ class D07_Dota2Senate {
     public String predictPartyVictory(String senate) {
         Queue<Character> queue = new ArrayDeque<>();
         int numR = 0, numD = 0;
-        for (char c: senate.toCharArray()) {
+        for (char c : senate.toCharArray()) {
             if (c == 'R') {
-                numR ++;
+                numR++;
             } else {
-                numD ++;
+                numD++;
             }
             queue.add(c);
         }
@@ -45,19 +45,19 @@ class D07_Dota2Senate {
             char current = queue.remove();
             if (current == 'R') {
                 if (bannedRCount > 0) {
-                    bannedRCount --;
-                    numR --;
+                    bannedRCount--;
+                    numR--;
                     continue;
                 }
-                bannedDCount ++;
+                bannedDCount++;
             }
             if (current == 'D') {
                 if (bannedDCount > 0) {
-                    bannedDCount --;
-                    numD --;
+                    bannedDCount--;
+                    numD--;
                     continue;
                 }
-                bannedRCount ++;
+                bannedRCount++;
             }
             queue.add(current);
 
