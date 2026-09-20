@@ -5,6 +5,13 @@ import utils.TestRunner;
 
 import java.util.Arrays;
 
+/**
+ * https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list
+ *
+ * ListNode 순회 동작 방식에 대한 이해가 필요함.
+ *
+ * Solution.pairSum() - 시간복잡도: O(n), 공간복잡도: O(n)
+ */
 public class D20_MaximumTwinSumofaLinkedList {
 
     public static void main(String[] args) {
@@ -64,9 +71,6 @@ public class D20_MaximumTwinSumofaLinkedList {
         }
     }
 
-    /**
-     * 시간복잡도: O(n), 공간복잡도: O(n)
-     */
     static class Solution {
         public int pairSum(ListNode head) {
             int n = getListNodeSize(head);
