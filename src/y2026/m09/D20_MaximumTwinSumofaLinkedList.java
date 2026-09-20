@@ -64,6 +64,9 @@ public class D20_MaximumTwinSumofaLinkedList {
         }
     }
 
+    /**
+     * 시간복잡도: O(n), 공간복잡도: O(n)
+     */
     static class Solution {
         public int pairSum(ListNode head) {
             int n = getListNodeSize(head);
@@ -84,6 +87,7 @@ public class D20_MaximumTwinSumofaLinkedList {
             return maxSum;
         }
 
+        // O(n) 시간복잡도로 길이 구하기
         private int getListNodeSize(ListNode head) {
             int size = 0;
             ListNode currentNode = head;
